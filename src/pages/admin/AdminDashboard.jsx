@@ -8,11 +8,11 @@ import myContext from "../../context/myContext";
 const AdminDashboard = () => {
   const user = JSON.parse(localStorage.getItem("users"));
   const context = useContext(myContext);
-  const { getAllProduct } = context;
+  const { getAllProduct, getAllOrder, getAllUser } = context;
   return (
     <div>
       {/* Top */}
-      <div className="top mb-5 px-5 mt-5">
+      <div className="top mb-5 px-20 mt-5">
         <div className=" bg-blue-50 py-5 border border-blue-100 rounded-lg">
           <h1 className=" text-center text-2xl font-bold text-blue-500">
             Admin Dashboard
@@ -20,7 +20,7 @@ const AdminDashboard = () => {
         </div>
       </div>
 
-      <div className="px-5">
+      <div className="px-20">
         {/* Mid  */}
         <div className="mid mb-5">
           {/* main  */}
@@ -111,7 +111,7 @@ const AdminDashboard = () => {
                       strokeWidth={2}
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                      className="lucide lucide-list-ordered"
+                      className="lucide lucide-list-ordeblue"
                     >
                       <line x1={10} x2={21} y1={6} y2={6} />
                       <line x1={10} x2={21} y1={12} y2={12} />
@@ -122,7 +122,7 @@ const AdminDashboard = () => {
                     </svg>
                   </div>
                   <h2 className="title-font font-medium text-3xl text-blue-400 fonts1">
-                    10
+                    {getAllOrder.length}
                   </h2>
                   <p className=" text-blue-500  font-bold">Total Order</p>
                 </div>
@@ -151,9 +151,9 @@ const AdminDashboard = () => {
                     </svg>
                   </div>
                   <h2 className="title-font font-medium text-3xl text-blue-400 fonts1">
-                    10
+                    {getAllUser.length}
                   </h2>
-                  <p className=" text-blue-500  font-bold">Total Order</p>
+                  <p className=" text-blue-500  font-bold">Total User</p>
                 </div>
               </Tab>
             </TabList>

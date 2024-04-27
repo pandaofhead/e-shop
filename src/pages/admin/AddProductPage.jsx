@@ -94,7 +94,7 @@ const AddProductPage = () => {
             </h2>
           </div>
 
-          {/* Input One  */}
+          {/* Product Title  */}
           <div className="mb-3">
             <input
               type="text"
@@ -111,7 +111,7 @@ const AddProductPage = () => {
             />
           </div>
 
-          {/* Input Two  */}
+          {/* Product Price  */}
           <div className="mb-3">
             <input
               type="number"
@@ -128,7 +128,7 @@ const AddProductPage = () => {
             />
           </div>
 
-          {/* Input Three  */}
+          {/* Image URL  */}
           <div className="mb-3">
             <input
               type="text"
@@ -145,7 +145,7 @@ const AddProductPage = () => {
             />
           </div>
 
-          {/* Input Four  */}
+          {/* Category  */}
           <div className="mb-3">
             <select
               value={product.category}
@@ -173,7 +173,7 @@ const AddProductPage = () => {
             </select>
           </div>
 
-          {/* Input Five  */}
+          {/* description  */}
           <div className="mb-3">
             <textarea
               value={product.description}
@@ -198,6 +198,15 @@ const AddProductPage = () => {
               className="bg-blue-500 hover:bg-blue-600 w-full text-white text-center py-2 font-bold rounded-md "
             >
               Add Product
+            </button>
+          </div>
+          <div className="mb-3">
+            <button
+              onClick={() => navigate("/admin-dashboard")}
+              type="button"
+              className="bg-red-500 hover:bg-red-600 w-full text-white text-center py-2 font-bold rounded-md "
+            >
+              Cancel
             </button>
           </div>
         </div>
