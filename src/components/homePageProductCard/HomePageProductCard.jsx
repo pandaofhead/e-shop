@@ -14,8 +14,6 @@ const HomePageProductCard = () => {
 
   const cartItems = useSelector((state) => state.cart);
 
-  // console.log(cartItems);
-
   const dispatch = useDispatch();
 
   // add to cart function
@@ -27,7 +25,7 @@ const HomePageProductCard = () => {
   // delete from cart function
   const deleteCart = (item) => {
     dispatch(deleteFromCart(item));
-    toast.success("Delete cart");
+    toast.success("Deleted from cart");
   };
 
   useEffect(() => {
@@ -50,7 +48,7 @@ const HomePageProductCard = () => {
           <div className="flex justify-center">{loading && <Loader />}</div>
           {/* main 3  */}
           <div className="flex flex-wrap -m-4">
-            {getAllProduct.slice(0, 8).map((item, index) => {
+            {getAllProduct.slice(0, 16).map((item, index) => {
               const { id, title, price, productImageUrl } = item;
               return (
                 <div key={index} className="p-4 w-full md:w-1/4">
@@ -85,7 +83,7 @@ const HomePageProductCard = () => {
                             onClick={() => addCart(item)}
                             className=" bg-blue-500 hover:bg-blue-600 w-full text-white py-[4px] rounded-lg font-bold"
                           >
-                            Add To cart
+                            Add To Cart
                           </button>
                         )}
                       </div>

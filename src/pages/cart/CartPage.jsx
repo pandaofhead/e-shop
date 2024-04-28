@@ -14,6 +14,7 @@ import BuyNowModal from "../../components/buyNowModal/BuyNowModal";
 import { Navigate } from "react-router";
 import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
+import cartIcon from "../../assets/cart.svg";
 const CartPage = () => {
   const navigate = useNavigate();
   const cartItems = useSelector((state) => state.cart);
@@ -108,6 +109,8 @@ const CartPage = () => {
         <div className="mx-auto max-w-2xl py-8 lg:max-w-7xl">
           <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             Shopping Cart
+            <img src={cartIcon} alt="cart" className="mx-2 h-8 w-8 inline-block" />
+            ({cartItems.length})
           </h1>
           <form className="mt-12 lg:grid lg:grid-cols-12 lg:items-start lg:gap-x-12 xl:gap-x-16">
             <section

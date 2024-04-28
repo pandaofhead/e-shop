@@ -4,12 +4,14 @@ import OrderDetail from "../../components/admin/OrderDetail";
 import UserDetail from "../../components/admin/UserDetail";
 import { useContext } from "react";
 import myContext from "../../context/myContext";
-
+import avatar from "../../assets/avatar1.png"
+import Layout from "../../components/layout/Layout";
 const AdminDashboard = () => {
   const user = JSON.parse(localStorage.getItem("users"));
   const context = useContext(myContext);
   const { getAllProduct, getAllOrder, getAllUser } = context;
   return (
+    <Layout>
     <div>
       {/* Top */}
       <div className="top mb-5 px-20 mt-5">
@@ -17,6 +19,7 @@ const AdminDashboard = () => {
           <h1 className=" text-center text-2xl font-bold text-blue-500">
             Admin Dashboard
           </h1>
+          
         </div>
       </div>
 
@@ -28,8 +31,9 @@ const AdminDashboard = () => {
             {/* image  */}
             <div className="flex justify-center">
               <img
-                src="https://cdn-icons-png.flaticon.com/128/2202/2202112.png"
-                alt=""
+                src={avatar}
+                alt="avatar"
+                class="relative inline-block h-30 w-30  border-2 border-blue-700 p-0.5 !rounded-full  object-cover object-center"
               />
             </div>
             {/* text  */}
@@ -172,7 +176,9 @@ const AdminDashboard = () => {
           </Tabs>
         </div>
       </div>
+      
     </div>
+    </Layout>
   );
 };
 

@@ -2,7 +2,7 @@ const Footer = () => {
   return (
     <div>
       {/* footer  */}
-      <footer className="text-gray-600 body-font bg-blue-300">
+      <footer className="text-gray-600 body-font bg-blue-600">
         {/* main  */}
         <div className="container px-5 py-5 mx-auto flex items-center sm:flex-row flex-col">
           {/* logo  */}
@@ -17,7 +17,9 @@ const Footer = () => {
           {/* media icon  */}
           <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
             {/* GitHub  */}
-            <a className="text-gray-100 cursor-pointer">
+            <a 
+            href="https://github.com/pandaofhead"
+            className="text-gray-100 cursor-pointer">
               <svg
                 class="w-6 h-6 text-white dark:text-white"
                 aria-hidden="true"
@@ -36,7 +38,9 @@ const Footer = () => {
             </a>
 
             {/* linkedIn  */}
-            <a className="ml-3 text-gray-100 cursor-pointer">
+            <a 
+            href="https://www.linkedin.com/in/hongjin-quan-564737271/"
+            className="ml-3 text-gray-100 cursor-pointer">
               <svg
                 fill="currentColor"
                 stroke="currentColor"

@@ -117,6 +117,14 @@ const ProductInfo = () => {
                         </button>
                       )}
                     </div>
+                    <div>
+                      <button
+                        onClick={() => window.history.back()}
+                        className="w-full px-4 py-3 text-center text-blue-600 bg-gray-100 border border-gray-600  hover:bg-gray-600 hover:text-gray-100  rounded-xl"
+                      >
+                        Go Back
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>

@@ -1,5 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
+import cartIcon from "../../assets/cart.svg";
 const Navbar = () => {
   // get user from localStorage
   const user = JSON.parse(localStorage.getItem("users"));
@@ -20,18 +21,24 @@ const Navbar = () => {
     <ul className="flex space-x-3 text-white font-medium text-md px-5 ">
       {/* Home */}
       <li>
-        <Link to={"/"}>Home</Link>
+        <Link to={"/"} className="font-bold text-xl hover:text-black">
+          Home
+        </Link>
       </li>
 
       {/* All Product */}
       <li>
-        <Link to={"/allproduct"}>All Product</Link>
+        <Link className="font-bold text-xl hover:text-black" to={"/allproduct"}>
+          All Product
+        </Link>
       </li>
 
       {/* Signup */}
       {!user ? (
         <li>
-          <Link to={"/signup"}>Signup</Link>
+          <Link className="font-bold text-xl hover:text-black" to={"/signup"}>
+            Signup
+          </Link>
         </li>
       ) : (
         ""
@@ -40,7 +47,9 @@ const Navbar = () => {
       {/* Signup */}
       {!user ? (
         <li>
-          <Link to={"/login"}>Login</Link>
+          <Link className="font-bold text-xl hover:text-black" to={"/login"}>
+            Login
+          </Link>
         </li>
       ) : (
         ""
@@ -49,27 +58,40 @@ const Navbar = () => {
       {/* User */}
       {user?.role === "user" && (
         <li>
-          <Link to={"/user-dashboard"}>User</Link>
+          <Link
+            className="font-bold text-xl hover:text-black"
+            to={"/user-dashboard"}
+          >
+            User
+          </Link>
         </li>
       )}
 
       {/* Admin */}
       {user?.role === "admin" && (
         <li>
-          <Link to={"/admin-dashboard"}>Admin</Link>
+          <Link
+            className="font-bold text-xl hover:text-black"
+            to={"/admin-dashboard"}
+          >
+            Admin
+          </Link>
         </li>
       )}
 
       {/* logout */}
       {user && (
-        <li className=" cursor-pointer" onClick={logout}>
+        <li className="font-bold text-xl hover:text-black" onClick={logout}>
           Logout
         </li>
       )}
 
       {/* Cart */}
       <li>
-        <Link to={"/cart"}>Cart({cartItems.length})</Link>
+        <Link className="font-bold text-xl hover:text-black" to={"/cart"}>
+          <img src={cartIcon} alt="cart" className="w-8" />
+          
+        </Link>
       </li>
     </ul>
   );
@@ -78,9 +100,9 @@ const Navbar = () => {
       {/* main  */}
       <div className="lg:flex lg:justify-between items-center py-3 lg:px-3 ">
         {/* left  */}
-        <div className="left py-3 lg:py-0">
+        <div className="left py-3 px-5 lg:py-0">
           <Link to={"/"}>
-            <h2 className=" font-bold text-white text-2xl text-center">
+            <h2 className=" font-bold text-white text-2xl text-center hover:text-black">
               E-Shop
             </h2>
           </Link>
@@ -88,8 +110,6 @@ const Navbar = () => {
 
         {/* right  */}
         <div className="right flex justify-center mb-4 lg:mb-0">{navList}</div>
-
-        
       </div>
     </nav>
   );

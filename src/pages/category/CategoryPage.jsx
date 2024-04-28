@@ -64,7 +64,10 @@ const CategoryPage = () => {
                       {filterProduct.map((item, index) => {
                         const { id, title, price, productImageUrl } = item;
                         return (
-                          <div key={index} className="p-4 w-full md:w-2/3 lg:w-1/4">
+                          <div
+                            key={index}
+                            className="p-4 w-full md:w-2/3 lg:w-1/4"
+                          >
                             <div className="h-full border border-gray-300 rounded-xl overflow-hidden shadow-md cursor-pointer">
                               <img
                                 onClick={() => navigate(`/productinfo/${id}`)}
@@ -74,7 +77,7 @@ const CategoryPage = () => {
                               />
                               <div className="p-6">
                                 <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
-                                  E-bharat
+                                  E-Shop
                                 </h2>
                                 <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
                                   {title.substring(0, 25)}
@@ -116,16 +119,17 @@ const CategoryPage = () => {
                         />
                       </div>
                       <h1 className=" text-black text-xl">
-                        No {categoryname} product found
+                        Coming Soon!
                       </h1>
                     </div>
                   )}
                 </div>
 
                 <div className="flex justify-center">
-                  <button 
+                  <button
                     onClick={() => navigate("/")}
-                  className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-lg">
+                    className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-lg"
+                  >
                     Go Back Home
                   </button>
                 </div>

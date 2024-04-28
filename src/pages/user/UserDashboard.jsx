@@ -2,7 +2,7 @@ import { useContext } from "react";
 import Layout from "../../components/layout/Layout";
 import myContext from "../../context/myContext";
 import Loader from "../../components/loader/Loader";
-
+import avatar from "../../assets/avatar2.png";
 const UserDashboard = () => {
   // user
   const user = JSON.parse(localStorage.getItem("users"));
@@ -22,8 +22,9 @@ const UserDashboard = () => {
             {/* image  */}
             <div className="flex justify-center">
               <img
-                src="https://cdn-icons-png.flaticon.com/128/2202/2202112.png"
-                alt=""
+                src={avatar}
+                alt="avatar"
+                class="relative inline-block h-30 w-30  border-2 border-blue-700 p-0.5 !rounded-full  object-cover object-center"
               />
             </div>
             {/* text  */}
