@@ -6,7 +6,7 @@ This is a full-satck e-commerce website that allows users to create an account, 
 
 The front end is built using **React and Redux**. The website is responsive and mobile friendly. The website is styled using **Material-UI, Tailwind CSS**.
 
-Front-end Figma roburic can be found [here](https://www.figma.com/file/CI6a6qwYxDQ1NXVA1IHcND/eshop?type=design&node-id=0-1&mode=design&t=3uNDMWPrgdJWm318-0)
+Product Figma wireframe can be found [here](https://www.figma.com/file/CI6a6qwYxDQ1NXVA1IHcND/eshop?type=design&node-id=0-1&mode=design&t=3uNDMWPrgdJWm318-0)
 
 ## Back End
 
@@ -27,9 +27,9 @@ hq48@cornell.edu
 admin password
 
 ```
-1257001104
+password
 ```
-## How to start the project
+## Run the project
 After cloning the project, run the following commands in the root directory:
 
 ```
