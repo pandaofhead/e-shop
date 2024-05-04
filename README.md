@@ -12,11 +12,11 @@ Product Figma wireframe can be found [here](https://www.figma.com/file/CI6a6qwYx
 
 The back end is built using **Firebase Database/Auth**. Firebase is used to store user data, product data, and order data. Firebase Authentication is used to authenticate users.
 
-## Hosting
+## Deployment
 
-The website is hosted on **Firebase Hosting**. The website can be accessed at the following URL:
+The website is hosted on **Vercel**. The website can be accessed at the following URL:
 
-https://e-shop-1f4b7.web.app/
+https://teapot-two.vercel.app/
 
 admin email
 
