@@ -18,7 +18,7 @@ const Footer = () => {
           <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
             {/* GitHub  */}
             <a 
-            href="https://github.com/pandaofhead"
+            href="https://github.com/pandaofhead/e-shop"
             className="text-gray-100 cursor-pointer">
               <svg
                 class="w-6 h-6 text-white dark:text-white"
