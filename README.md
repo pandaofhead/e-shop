@@ -24,13 +24,13 @@ The back end is built using **Firebase Database/Auth**. Firebase is used to stor
 
 The website is hosted on **Vercel**. 
 
-admin email
+admin email:
 
 ```
 hq48@cornell.edu
 ```
 
-admin password
+admin password:
 
 ```
 password
